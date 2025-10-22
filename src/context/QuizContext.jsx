@@ -7,11 +7,16 @@ export const QuizProvider = ({ children }) => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
 
     const selectAnswer = (questionIndex, answer) => {
+        console.log(selectedAnswers);
         setSelectedAnswers(prev => ({
             ...prev,
             [questionIndex]: answer
         }));
     };
+
+    const restart = ()=> {
+        setSelectedAnswers({})
+    }
 
     const value = {
         selectedAnswers,
@@ -19,7 +24,8 @@ export const QuizProvider = ({ children }) => {
         setShowResults,
         currentQuestion,
         setCurrentQuestion,
-        selectAnswer
+        selectAnswer,
+        restart
     };
 
     return (

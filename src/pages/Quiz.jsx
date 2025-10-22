@@ -7,7 +7,7 @@ import { quizData } from '../constants/quizes';
 
 // Quiz Display Component
 const QuizDisplay = ({ questions }) => {
-    const { selectedAnswers, selectAnswer, showResults, setShowResults } = useQuizContext();
+    const { selectedAnswers, selectAnswer, showResults, setShowResults, restart } = useQuizContext();
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
     useEffect(() => {
@@ -43,6 +43,7 @@ const QuizDisplay = ({ questions }) => {
     const restartQuiz = () => {
         setCurrentQuestionIndex(0);
         setShowResults(false);
+        restart()
     };
 
     if (questions.length === 0) {
