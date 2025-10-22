@@ -81,8 +81,6 @@ const Contact = () => {
 
     return (
         <Container fluid className="mt-4 px-4">
-            <Row>
-                <Col>
                     <Form onSubmit={handleSubmit}>
                         <Row>
                             <Col md={4}>
@@ -100,6 +98,9 @@ const Contact = () => {
                                     />
                                     <Form.Control.Feedback type="valid">
                                         Looks good!
+                                    </Form.Control.Feedback>
+                                     <Form.Control.Feedback type="invalid">
+                                        Please provide a firstName.
                                     </Form.Control.Feedback>
                                 </Form.Group>
                             </Col>
@@ -119,6 +120,9 @@ const Contact = () => {
                                     <Form.Control.Feedback type="valid">
                                         Looks good!
                                     </Form.Control.Feedback>
+                                     <Form.Control.Feedback type="invalid">
+                                        Please provide a lastName.
+                                    </Form.Control.Feedback>
                                 </Form.Group>
                             </Col>
                             <Col md={4}>
@@ -136,6 +140,9 @@ const Contact = () => {
                                     />
                                     <Form.Control.Feedback type="invalid">
                                         Please choose a username.
+                                    </Form.Control.Feedback>
+                                    <Form.Control.Feedback type="valid">
+                                        Looks good!
                                     </Form.Control.Feedback>
                                 </Form.Group>
                             </Col>
@@ -158,6 +165,9 @@ const Contact = () => {
                                     <Form.Control.Feedback type="invalid">
                                         Please provide a valid city.
                                     </Form.Control.Feedback>
+                                    <Form.Control.Feedback type="valid">
+                                        Looks good!
+                                    </Form.Control.Feedback>
                                 </Form.Group>
                             </Col>
                             <Col md={4}>
@@ -176,6 +186,9 @@ const Contact = () => {
                                     <Form.Control.Feedback type="invalid">
                                         Please provide a valid state.
                                     </Form.Control.Feedback>
+                                    <Form.Control.Feedback type="valid">
+                                        Looks good!
+                                    </Form.Control.Feedback>
                                 </Form.Group>
                             </Col>
                             <Col md={4}>
@@ -193,6 +206,9 @@ const Contact = () => {
                                     />
                                     <Form.Control.Feedback type="invalid">
                                         Please provide a valid zip.
+                                    </Form.Control.Feedback>
+                                    <Form.Control.Feedback type="valid">
+                                        Looks good!
                                     </Form.Control.Feedback>
                                 </Form.Group>
                             </Col>
@@ -225,8 +241,6 @@ const Contact = () => {
                             </Col>
                         </Row>
                     </Form>
-                </Col>
-            </Row>
         </Container>
     );
 };
